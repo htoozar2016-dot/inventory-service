@@ -1,0 +1,10 @@
+INSERT INTO products (name, price, qty) VALUES ('Espresso',       2.50, 100);
+INSERT INTO products (name, price, qty) VALUES ('Cappuccino',     3.50, 100);
+INSERT INTO products (name, price, qty) VALUES ('Green Tea',      2.00,  80);
+INSERT INTO products (name, price, qty) VALUES ('Orange Juice',   3.00,  60);
+INSERT INTO products (name, price, qty) VALUES ('Burger',         6.50,  50);
+INSERT INTO products (name, price, qty) VALUES ('Club Sandwich',  5.50,  50);
+INSERT INTO products (name, price, qty) VALUES ('French Fries',   2.50,  70);
+INSERT INTO products (name, price, qty) VALUES ('Mineral Water',  1.00, 150);
+INSERT INTO products (name, price, qty) VALUES ('Chocolate Cake', 4.00,  40);
+INSERT INTO products (name, price, qty) VALUES ('Caesar Salad',   5.00,  45);

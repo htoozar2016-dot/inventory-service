@@ -1,0 +1,15 @@
+server:
+  port: 3002
+  servlet:
+    context-path: ${SERVER_SERVLET_CONTEXT_PATH:/inventory}
+
+spring:
+  datasource:
+    url: "jdbc:sqlite:file::memory:?cache=shared"
+    driver-class-name: org.sqlite.JDBC
+    hikari:
+      maximum-pool-size: 1
+      connection-test-query: SELECT 1
+  sql:
+    init:
+      mode: always

@@ -1,0 +1,13 @@
+FROM eclipse-temurin:25-jdk-alpine
+
+ENV TZ="Asia/Singapore"
+
+RUN mkdir -p /opt/app/config
+
+ADD target/inventory-service.jar /opt/app/
+
+WORKDIR /opt/app
+
+EXPOSE 3002
+
+ENTRYPOINT [ "sh", "-c", "java -Xms${MIN_JVM_MEMORY}m -Xmx${MAX_JVM_MEMORY}m -jar /opt/app/inventory-service.jar --spring.config.additional-location=file:///opt/app/config/ --spring.config.name=application,application_config_override,application_secret_override" ]
