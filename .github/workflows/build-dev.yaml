@@ -50,12 +50,12 @@ jobs:
           platforms: linux/amd64,linux/arm64
           tags: ghcr.io/htoozar2016-dot/inventory-service:${{ steps.tag-version.outputs.version }}
 
-      - name: Checkout Kustomize chart Repository
-        uses: actions/checkout@v3
-        with:
-          repository: htoozar2016-dot/inventory-service
-          path: deployment
-          token: ${{ secrets.MY_GITHUB_TOKEN }}
+      # - name: Checkout Kustomize chart Repository
+      #   uses: actions/checkout@v3
+      #   with:
+      #     repository: htoozar2016-dot/inventory-service
+      #     path: deployment
+      #     token: ${{ secrets.MY_GITHUB_TOKEN }}
 
       # - name: Update image tag in dev overlay
       #   uses: fjogeleit/yaml-update-action@main
