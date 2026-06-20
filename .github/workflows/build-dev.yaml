@@ -3,7 +3,7 @@ name: Build & Deploy — Dev
 on:
   push:
     branches:
-      - develop
+      - main
 
 jobs:
   dockr-build-and-push:
@@ -48,12 +48,12 @@ jobs:
           file: ./deployment/Dockerfile.dev
           push: true
           platforms: linux/amd64,linux/arm64
-          tags: ghcr.io/zawthanoo/inventory-service:${{ steps.tag-version.outputs.version }}
+          tags: ghcr.io/htoozar2016-dot/inventory-service:${{ steps.tag-version.outputs.version }}
 
       - name: Checkout Kustomize chart Repository
         uses: actions/checkout@v3
         with:
-          repository: zawthanoo/workshop-apps
+          repository: htoozar2016-dot/inventory-service
           path: deployment
           token: ${{ secrets.MY_GITHUB_TOKEN }}
 
